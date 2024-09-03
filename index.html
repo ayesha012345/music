@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar Section -->
+        <div class="navbar">
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#items">Items</a></li>
+                <li><a href="#connect">Connect</a></li>
+            </ul>
+        </div>
+
+        <!-- Home Section -->
+        <div class="content" id="home">
+            <div class="left-col">
+                <h1>The<br>Real<br> Music</h1>
+               
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="assets/images/play.png" alt="Play" id="icon">
+            </div>  
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2>About Us</h2>
+            <div class="about-card">
+                <img src="assets/images/about.png" alt="About Us">
+                <div class="about-text">
+                    <p>Welcome to our music website where we offer a vast collection of tracks from various genres. Our mission is to provide you with the best musical experience possible. Whether you’re a fan of classical, rock, or pop music, we have something for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Items Section -->
+    <section id="items" class="section">
+        <div class="section-content">
+            <h2>Our Collection</h2>
+            <div class="items-grid">
+                <div class="item-card">
+                    <h3>Track 1</h3>
+                    <p>Description of Track 1</p>
+                </div>
+                <div class="item-card">
+                    <h3>Track 2</h3>
+                    <p>Description of Track 2</p>
+                </div>
+                <div class="item-card">
+                    <h3>Track 3</h3>
+                    <p>Description of Track 3</p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="section">
+        <div class="section-content">
+            <h2>Connect with Us</h2>
+            <p>Follow us on social media to stay updated with the latest releases and events.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+               
+            </ul>
+        </div>
+    </section>
+
+    <!-- Music Player -->
+    <audio id="song">
+        <source src="assets/images/01.PHP Introduction Tutorial in Hindi _ Urdu.mp4" type="audio/mp3">
+    </audio>
+
+    <!-- JavaScript for Play/Pause -->
+    <script>
+        var song = document.getElementById('song');
+        var icon = document.getElementById('icon');
+
+        icon.onclick = function(){
+            if(song.paused){
+                song.play();
+                icon.src = 'assets/images/pause.png';
+            }
+            else{
+                song.pause();
+                icon.src = 'assets/images/play.png';
+            }
+        }
+    </script>
+</body>
+</html>
